@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home page</title>
+</head>
+<body>
+	<section>
+
+
+
+		<div class="card mr-1 ml-1 widht=100%" >
+
+
+			<div class="card-body mr-5">
+
+
+				<div class="container text-center">
+					<img src="" style="height: 120px; width: 120px;" class="my_profile"
+						th:src="@{'/image/dashboard.png'}" alt="profile photo" />
+				</div>
+
+
+
+
+
+				<h1 class="text-center mt-3 text-secondary">Start adding your
+					contact</h1>
+					
+					
+				<a th:href="@{/user/add-contact}" class="btn btn-primary btn-block text-uppercase mt-3
+				">Add new contact</a>	
+				
+				<hr/>
+				<h3 class="my-2">Donate</h3>
+				<input id="payment_field" type="text" class="form-control my-2" placeholder="Enter amount here">
+					
+					<div class="container text-center">
+					<button onclick="paymentStart()" class="btn btn-success">Pay</button>
+					</div>
+
+			</div>
+		</div>
+		
+		<script>
+		
+		$(document).ready(()=>{
+			$('.item').removeClass('active')
+			$('#home-link').addClass("active")
+		});
+		
+	
+		
+		
+		</script>
+
+
+	</section>
+
+
+
+
+
+</body>
+</html>
+
+
+<!-- <h1> user name <span th:text="${user.name}"></span></h1> 
+	<h1><a href="" th:href="@{/logout}">logout</a></h1> -->

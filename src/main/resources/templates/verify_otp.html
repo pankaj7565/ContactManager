@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Login page</title>
+</head>
+
+<body>
+	<section>
+
+	<div class="login-wrap mt-5">
+<!-- 	
+			<div class="login-html">
+				<div class="alert alert-success" role="alert">We have sent OTP
+					to your email</div>
+				<input id="tab-2" type="radio" name="tab" class="for-pwd"><label
+					for="tab-2" class="tab">Click here to Enter OTP</label> -->
+
+
+<!-- 			<div th:if="${httpSession.message}" class="container">
+					<div class="alert alert-danger my-2 text-center" role="alert">
+						<span th:text="${httpSession.message}"></span>
+					</div>
+					<th:block th:text="${#httpSession.removeAttribute('message')}"></th:block>
+
+
+
+
+				</div>  -->
+
+
+
+
+				<div class="login-form">
+					<form method="post" th:action="@{/verify-otp}">
+						<div class="for-pwd-htm">
+							<div class="group">
+								<label for="user" class="label"></label>
+								 <input name="OTP"
+									required="required" placeholder="Enter Your OTP here"
+									type="text" class="input">
+							</div>
+
+							<div class="group">
+								<input type="submit" class="button button-success"
+									value="verify">
+							</div>
+
+
+
+
+							<div class="hr"></div>
+
+						</div>
+
+					</form>
+
+
+				</div>
+			 </div>
+		<!-- </div> -->
+
+	</section>
+</body>
+
+
+
+
+
+
+
+</body>
+
+</html>

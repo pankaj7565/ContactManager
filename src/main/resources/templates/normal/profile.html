@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home page</title>
+</head>
+<body>
+	<section>
+
+		<div class="container">
+
+			<div class="card">
+
+<!--update this admin role  -->
+				<div class="card-body">
+				<div class="table-responsive">
+				<div class="container text-center">
+				<img src="" style="height: 120px; width: 120px;" class="my_profile"
+						th:src="@{'/image/'+${user.imageUrl}}" alt="profile photo" />
+			
+				</div>
+				<h1 class="text-center" th:text="${user.name}"></h1>
+					
+					<table class="table text-center">
+						<thead>
+							<tr>
+								<th scope="col">#USERID</th>
+								<th scope="col">USER<span th:text="${user.id}"></span></th>
+
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">EMAIL</th>
+								<td><span th:text="${user.email}"></span></td>
+							</tr>
+
+							<tr>
+								<th scope="row">ROLE</th>
+								<td><span th:text="${user.role}"></span></td>
+							</tr>
+
+							<tr>
+								<th scope="row">ACTIVE</th>
+								<td><span th:text="${user.enabled}"></span></td>
+							</tr>
+
+
+							<tr>
+							<tr>
+								<th scope="row">ABOUT YOU</th>
+								<td><span th:text="${user.about}"></span></td>
+							</tr>
+					</table>
+
+
+
+
+				</div>
+
+
+			</div>
+
+
+		</div>
+
+</div>
+
+<script>
+		
+		$(document).ready(()=>{
+			$('.item').removeClass('active')
+			$('#profile-link').addClass("active")
+		});
+		
+	
+		
+		
+		</script>
+
+	</section>
+
+
+
+
+
+</body>
+</html>
+
+
+<!-- <h1> user name <span th:text="${user.name}"></span></h1> 
+	<h1><a href="" th:href="@{/logout}">logout</a></h1> -->
