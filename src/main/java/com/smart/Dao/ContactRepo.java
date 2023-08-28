@@ -10,7 +10,7 @@ import com.smart.entities.User;
 
 import java.util.List;
 
-
+//	this is new comment
 public interface ContactRepo extends JpaRepository<Contact, Integer> {
 //	pegination
 	
@@ -25,6 +25,7 @@ public interface ContactRepo extends JpaRepository<Contact, Integer> {
 	
 	
 //	for the search result
+
 	
 	public List<Contact> findByNameContainingAndUser(String name,User user);
 	
